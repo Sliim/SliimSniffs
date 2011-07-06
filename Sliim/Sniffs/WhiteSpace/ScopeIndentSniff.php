@@ -41,6 +41,6 @@ extends Generic_Sniffs_WhiteSpace_ScopeIndentSniff
    *
    * @var int
    */
-  protected $indent = 2;
+  public $indent = 2;
 
 }//end class
