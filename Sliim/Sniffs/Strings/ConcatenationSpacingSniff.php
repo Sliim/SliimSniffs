@@ -37,8 +37,10 @@ extends Squiz_Sniffs_Strings_ConcatenationSpacingSniff
    *
    * @return array
    */
-  public function register() {
+  public function register()
+  {
       return array(T_STRING_CONCAT);
+
   }//end register()
 
 
@@ -51,7 +53,8 @@ extends Squiz_Sniffs_Strings_ConcatenationSpacingSniff
    *
    * @return void
    */
-  public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr) {
+  public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
+  {
     $tokens   = $phpcsFile->getTokens();
     $found    = '';
     $expected = '';

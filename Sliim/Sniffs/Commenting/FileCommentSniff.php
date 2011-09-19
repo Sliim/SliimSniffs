@@ -117,7 +117,8 @@ extends PEAR_Sniffs_Commenting_FileCommentSniff
    *
    * @return void
    */
-  protected function processVersion($errorPos) {
+  protected function processVersion($errorPos)
+  {
     $version = $this->commentParser->getVersion();
     if ($version !== null) {
       $content = $version->getContent();

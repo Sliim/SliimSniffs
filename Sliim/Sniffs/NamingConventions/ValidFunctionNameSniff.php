@@ -37,6 +37,7 @@ class Sliim_Sniffs_NamingConventions_ValidFunctionNameSniff
 extends PEAR_Sniffs_NamingConventions_ValidFunctionNameSniff
 {
 
+
   /**
    * Processes the tokens within the scope.
    *
@@ -47,7 +48,8 @@ extends PEAR_Sniffs_NamingConventions_ValidFunctionNameSniff
    *
    * @return void
    */
-  protected function processTokenWithinScope(PHP_CodeSniffer_File $phpcsFile, $stackPtr, $currScope) {
+  protected function processTokenWithinScope(PHP_CodeSniffer_File $phpcsFile, $stackPtr, $currScope)
+  {
     $methodName = $phpcsFile->getDeclarationName($stackPtr);
     if ($methodName === null) {
       // Ignore closures.

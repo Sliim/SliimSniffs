@@ -29,12 +29,15 @@
 class Sliim_Sniffs_Commenting_FixmeSniff
 extends Generic_Sniffs_Commenting_TodoSniff
 {
+
+
   /**
    * Returns an array of tokens this test wants to listen for.
    * 
    * @return array
    */
-  public function register() {
+  public function register()
+  {
     return PHP_CodeSniffer_Tokens::$commentTokens;
 
   }//end register()
@@ -49,7 +52,8 @@ extends Generic_Sniffs_Commenting_TodoSniff
    *
    * @return void
    */
-  public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr) {
+  public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
+  {
     $tokens = $phpcsFile->getTokens();
 
     $content = $tokens[$stackPtr]['content'];
@@ -68,5 +72,6 @@ extends Generic_Sniffs_Commenting_TodoSniff
     }
 
   }//end process()
+
 
 }//end class
