@@ -31,6 +31,7 @@
   <rule ref="Squiz/Sniffs/PHP/">
     <exclude name="Squiz.PHP.EmbeddedPhp" />
     <exclude name="Squiz.PHP.ForbiddenFunctions" />
+    <exclude name="Squiz.PHP.DisallowMultipleAssignments" />
   </rule>
   <rule ref="Squiz/Sniffs/Functions/" />
   <rule ref="Squiz/Sniffs/WhiteSpace/" />
