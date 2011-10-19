@@ -2,6 +2,10 @@
 <ruleset name="Sliim">
   <description>Sliim PHP Coding Standard</description>
 
+  <exclude-pattern>*.css</exclude-pattern>
+  <exclude-pattern>*.htm</exclude-pattern>
+  <exclude-pattern>*.html</exclude-pattern>
+
   <rule ref="Generic/Sniffs/Classes/" />
   <rule ref="Generic/Sniffs/Formatting/">
     <exclude name="Generic.Formatting.NoSpaceAfterCast" />
