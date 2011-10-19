@@ -13,7 +13,6 @@
   <rule ref="Generic/Sniffs/NamingConventions/" />
   <rule ref="Generic/Sniffs/CodeAnalysis/" />
 
-  <rule ref="Generic.Files.LineLength" />
   <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
 
   <rule ref="PEAR/Sniffs/Classes/" />
