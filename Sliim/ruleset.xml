@@ -1,55 +1,54 @@
 <?xml version="1.0"?>
 <ruleset name="Sliim">
-  <description>Sliim PHP Coding Standard</description>
+    <description>Sliim PHP Coding Standard</description>
 
-  <exclude-pattern>*.css</exclude-pattern>
-  <exclude-pattern>*.htm</exclude-pattern>
-  <exclude-pattern>*.html</exclude-pattern>
+    <exclude-pattern>*.css</exclude-pattern>
+    <exclude-pattern>*.htm</exclude-pattern>
+    <exclude-pattern>*.html</exclude-pattern>
 
-  <rule ref="Generic/Sniffs/Classes/" />
-  <rule ref="Generic/Sniffs/Formatting/">
-    <exclude name="Generic.Formatting.NoSpaceAfterCast" />
-  </rule>
-  <rule ref="Generic/Sniffs/NamingConventions/" />
-  <rule ref="Generic/Sniffs/CodeAnalysis/" />
+    <rule ref="Generic/Sniffs/Classes/" />
+    <rule ref="Generic/Sniffs/Formatting/">
+        <exclude name="Generic.Formatting.NoSpaceAfterCast" />
+    </rule>
+    <rule ref="Generic/Sniffs/NamingConventions/" />
+    <rule ref="Generic/Sniffs/CodeAnalysis/" />
+    <rule ref="Generic/Sniffs/WhiteSpace/" />
 
-  <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
+    <rule ref="PEAR/Sniffs/Classes/" />
+    <rule ref="PEAR/Sniffs/Functions/">
+        <exclude name="PEAR.Functions.FunctionDeclaration" />
+    </rule>
 
-  <rule ref="PEAR/Sniffs/Classes/" />
-  <rule ref="PEAR/Sniffs/Functions/">
-    <exclude name="PEAR.Functions.FunctionDeclaration" />
-  </rule>
-
-  <rule ref="PEAR.Commenting.InlineComment" />
-  <rule ref="PEAR.Commenting.FunctionComment" />
-  <rule ref="PEAR.Files.IncludingFile" />
-  <rule ref="PEAR.NamingConventions.ValidClassName" />
-  <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent" />
-  <rule ref="PEAR.WhiteSpace.ScopeClosingBrace" />
-
-
-  <rule ref="Squiz/Sniffs/Arrays/" />
-  <rule ref="Squiz/Sniffs/Operators/">
-    <exclude name="Squiz.Operators.ComparisonOperatorUsage" />
-  </rule>
-  <rule ref="Squiz/Sniffs/PHP/">
-    <exclude name="Squiz.PHP.EmbeddedPhp" />
-    <exclude name="Squiz.PHP.ForbiddenFunctions" />
-    <exclude name="Squiz.PHP.DisallowMultipleAssignments" />
-    <exclude name="Squiz.PHP.DisallowInlineIf" />
-  </rule>
-  <rule ref="Squiz/Sniffs/Functions/" />
-  <rule ref="Squiz/Sniffs/WhiteSpace/" />
-  <rule ref="Squiz/Sniffs/ControlStructures/">
-    <exclude name="Squiz.ControlStructures.SwitchDeclaration" />
-    <exclude name="Squiz.ControlStructures.InlineIfDeclaration" />
-  </rule>
-
-  <rule ref="Squiz.Classes.DuplicateProperty" />
-  <rule ref="Squiz.Objects.ObjectInstantiation" />
+    <rule ref="PEAR.Commenting.InlineComment" />
+    <rule ref="PEAR.Commenting.FunctionComment" />
+    <rule ref="PEAR.Files.IncludingFile" />
+    <rule ref="PEAR.NamingConventions.ValidClassName" />
+    <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent" />
+    <rule ref="PEAR.WhiteSpace.ScopeClosingBrace" />
 
 
-  <rule ref="Zend.NamingConventions.ValidVariableName" />
-  <rule ref="Zend.Debug.CodeAnalyzer" />
+    <rule ref="Squiz/Sniffs/Arrays/" />
+    <rule ref="Squiz/Sniffs/Operators/">
+        <exclude name="Squiz.Operators.ComparisonOperatorUsage" />
+    </rule>
+    <rule ref="Squiz/Sniffs/PHP/">
+        <exclude name="Squiz.PHP.EmbeddedPhp" />
+        <exclude name="Squiz.PHP.ForbiddenFunctions" />
+        <exclude name="Squiz.PHP.DisallowMultipleAssignments" />
+        <exclude name="Squiz.PHP.DisallowInlineIf" />
+    </rule>
+    <rule ref="Squiz/Sniffs/Functions/" />
+    <rule ref="Squiz/Sniffs/WhiteSpace/" />
+    <rule ref="Squiz/Sniffs/ControlStructures/">
+        <exclude name="Squiz.ControlStructures.SwitchDeclaration" />
+        <exclude name="Squiz.ControlStructures.InlineIfDeclaration" />
+    </rule>
+
+    <rule ref="Squiz.Classes.DuplicateProperty" />
+    <rule ref="Squiz.Objects.ObjectInstantiation" />
+
+
+    <rule ref="Zend.NamingConventions.ValidVariableName" />
+    <rule ref="Zend.Debug.CodeAnalyzer" />
 
 </ruleset>

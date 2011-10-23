@@ -31,18 +31,18 @@ class Sliim_Sniffs_PHP_ForbiddenFunctionsSniff
 extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff
 {
 
-  /**
-   * A list of forbidden functions with their alternatives.
-   *
-   * The value is NULL if no alternative exists. IE, the
-   * function should just not be used.
-   *
-   * @var array(string => string|null)
-   */
-  protected $forbiddenFunctions = array(
-                                   'sizeof' => 'count',
-                                   'delete' => 'unset',
-                                   'ereg'   => 'preg_match',
-                                   'print'  => 'echo',
-                                  );
+    /**
+     * A list of forbidden functions with their alternatives.
+     *
+     * The value is NULL if no alternative exists. IE, the
+     * function should just not be used.
+     *
+     * @var array(string => string|null)
+     */
+    protected $forbiddenFunctions = array(
+                                     'sizeof' => 'count',
+                                     'delete' => 'unset',
+                                     'ereg'   => 'preg_match',
+                                     'print'  => 'echo',
+                                    );
 }//end class
