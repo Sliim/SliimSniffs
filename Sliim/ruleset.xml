@@ -7,7 +7,9 @@
     <exclude-pattern>*.html</exclude-pattern>
     <exclude-pattern>*.js</exclude-pattern>
 
+
     <rule ref="Generic/Sniffs/Classes/" />
+    <rule ref="Generic/Sniffs/ControlStructures/" />
     <rule ref="Generic/Sniffs/Formatting/">
         <exclude name="Generic.Formatting.NoSpaceAfterCast" />
     </rule>
@@ -42,7 +44,6 @@
     <rule ref="Squiz/Sniffs/WhiteSpace/" />
     <rule ref="Squiz/Sniffs/ControlStructures/">
         <exclude name="Squiz.ControlStructures.SwitchDeclaration" />
-        <exclude name="Squiz.ControlStructures.InlineIfDeclaration" />
     </rule>
 
     <rule ref="Squiz.Classes.DuplicateProperty" />
