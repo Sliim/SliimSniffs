@@ -48,6 +48,7 @@
     </rule>
 
     <rule ref="Squiz.Classes.DuplicateProperty" />
+    <rule ref="Squiz.NamingConventions.ConstantCase" />
 
 
     <rule ref="Zend.NamingConventions.ValidVariableName" />
