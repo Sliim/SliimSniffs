@@ -40,9 +40,10 @@ extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff
      * @var array(string => string|null)
      */
     protected $forbiddenFunctions = array(
-                                     'sizeof' => 'count',
-                                     'delete' => 'unset',
-                                     'ereg'   => 'preg_match',
-                                     'print'  => 'echo',
+                                     'sizeof'     => 'count',
+                                     'delete'     => 'unset',
+                                     'ereg'       => 'preg_match',
+                                     'print'      => 'echo',
+                                     'key_exists' => 'array_key_exists',
                                     );
 }//end class
