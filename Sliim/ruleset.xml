@@ -42,7 +42,9 @@
         <exclude name="Squiz.PHP.DisallowInlineIf" />
     </rule>
     <rule ref="Squiz/Sniffs/Functions/" />
-    <rule ref="Squiz/Sniffs/WhiteSpace/" />
+    <rule ref="Squiz/Sniffs/WhiteSpace/">
+        <exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing" />
+    </rule>
     <rule ref="Squiz/Sniffs/ControlStructures/">
         <exclude name="Squiz.ControlStructures.SwitchDeclaration" />
     </rule>
