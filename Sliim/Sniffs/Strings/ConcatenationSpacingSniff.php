@@ -58,7 +58,7 @@ extends Squiz_Sniffs_Strings_ConcatenationSpacingSniff
         $tokens   = $phpcsFile->getTokens();
         $found    = '';
         $expected = '';
-        $error    = false;
+        $error    = FALSE;
 
         if ($tokens[($stackPtr - 1)]['code'] !== T_WHITESPACE
           || strlen($tokens[($stackPtr - 1)]['content']) !== 1) {
@@ -66,7 +66,7 @@ extends Squiz_Sniffs_Strings_ConcatenationSpacingSniff
               $tokens[$stackPtr]['content'];
             $found    .= '...' . substr($tokens[($stackPtr - 2)]['content'], -5) .
               $tokens[($stackPtr - 1)]['content'] . $tokens[$stackPtr]['content'];
-            $error     = true;
+            $error     = TRUE;
         } else {
             $found .= '...' . substr($tokens[($stackPtr - 1)]['content'], -5) .
               $tokens[$stackPtr]['content'];
@@ -81,13 +81,13 @@ extends Squiz_Sniffs_Strings_ConcatenationSpacingSniff
             $found    .= $tokens[($stackPtr + 1)]['content'] .
               substr($tokens[($stackPtr + 2)]['content'], 0, 5) . '...';
 
-            $error = true;
+            $error = TRUE;
         } else {
             $found    .= $tokens[($stackPtr + 1)]['content'];
             $expected .= $tokens[($stackPtr + 1)]['content'];
         }
 
-        if ($error === true) {
+        if ($error === TRUE) {
             $found    = str_replace("\r\n", '\n', $found);
             $found    = str_replace("\n", '\n', $found);
             $found    = str_replace("\r", '\n', $found);

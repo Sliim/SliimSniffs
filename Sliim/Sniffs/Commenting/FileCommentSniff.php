@@ -13,7 +13,7 @@
  * @link     http://www.sliim-projects.eu
  */
 
-if (class_exists('PHP_CodeSniffer_CommentParser_ClassCommentParser', true) === false) {
+if (class_exists('PHP_CodeSniffer_CommentParser_ClassCommentParser', TRUE) === FALSE) {
     throw new PHP_CodeSniffer_Exception('Class PHP_CodeSniffer_CommentParser_ClassCommentParser not found');
 }
 
@@ -54,58 +54,58 @@ extends PEAR_Sniffs_Commenting_FileCommentSniff
      */
     protected $tags = array(
                        'category'   => array(
-                                        'required'       => true,
-                                        'allow_multiple' => false,
+                                        'required'       => TRUE,
+                                        'allow_multiple' => FALSE,
                                         'order_text'     => 'precedes @package',
                                        ),
                        'package'    => array(
-                                        'required'       => true,
-                                        'allow_multiple' => false,
+                                        'required'       => TRUE,
+                                        'allow_multiple' => FALSE,
                                         'order_text'     => 'follows @category',
                                        ),
                        'subpackage' => array(
-                                        'required'       => false,
-                                        'allow_multiple' => false,
+                                        'required'       => FALSE,
+                                        'allow_multiple' => FALSE,
                                         'order_text'     => 'follows @package',
                                        ),
                        'author'     => array(
-                                        'required'       => true,
-                                        'allow_multiple' => true,
+                                        'required'       => TRUE,
+                                        'allow_multiple' => TRUE,
                                         'order_text'     => 'follows @subpackage (if used) or @package',
                                        ),
                        'copyright'  => array(
-                                        'required'       => false,
-                                        'allow_multiple' => true,
+                                        'required'       => FALSE,
+                                        'allow_multiple' => TRUE,
                                         'order_text'     => 'follows @author',
                                        ),
                        'license'    => array(
-                                        'required'       => true,
-                                        'allow_multiple' => false,
+                                        'required'       => TRUE,
+                                        'allow_multiple' => FALSE,
                                         'order_text'     => 'follows @copyright (if used) or @author',
                                        ),
                        'version'    => array(
-                                        'required'       => true,
-                                        'allow_multiple' => false,
+                                        'required'       => TRUE,
+                                        'allow_multiple' => FALSE,
                                         'order_text'     => 'follows @license',
                                        ),
                        'link'       => array(
-                                        'required'       => true,
-                                        'allow_multiple' => true,
+                                        'required'       => TRUE,
+                                        'allow_multiple' => TRUE,
                                         'order_text'     => 'follows @version',
                                        ),
                        'see'        => array(
-                                        'required'       => false,
-                                        'allow_multiple' => true,
+                                        'required'       => FALSE,
+                                        'allow_multiple' => TRUE,
                                         'order_text'     => 'follows @link',
                                        ),
                        'since'      => array(
-                                        'required'       => false,
-                                        'allow_multiple' => false,
+                                        'required'       => FALSE,
+                                        'allow_multiple' => FALSE,
                                         'order_text'     => 'follows @see (if used) or @link',
                                        ),
                        'deprecated' => array(
-                                        'required'       => false,
-                                        'allow_multiple' => false,
+                                        'required'       => FALSE,
+                                        'allow_multiple' => FALSE,
                                         'order_text'     => 'follows @since (if used) or @see (if used) or @link',
                                        ),
                       );
@@ -121,10 +121,10 @@ extends PEAR_Sniffs_Commenting_FileCommentSniff
     protected function processVersion($errorPos)
     {
         $version = $this->commentParser->getVersion();
-        if ($version !== null) {
+        if ($version !== NULL) {
             $content = $version->getContent();
             $matches = array();
-            if (empty($content) === true) {
+            if (empty($content) === TRUE) {
                 $error = 'Content missing for @version tag in file comment';
                 $this->currentFile->addError($error, $errorPos);
             }

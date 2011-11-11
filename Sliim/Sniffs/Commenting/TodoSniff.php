@@ -16,7 +16,7 @@
 /**
  * Sliim_Sniffs_Commenting_TodoSniff.
  *
- * Warns about TODO comments.
+ * Warns about To Do comments.
  *
  * @category PHP
  * @package  CodeSniffer

@@ -16,7 +16,7 @@
 /**
  * Sliim_Sniffs_Commenting_FixmeSniff.
  *
- * Warns about FIXME comments.
+ * Warns about Fix Me comments.
  *
  * @category PHP
  * @package  CodeSniffer

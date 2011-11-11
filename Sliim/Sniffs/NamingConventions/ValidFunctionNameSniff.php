@@ -13,7 +13,7 @@
  * @link     http://www.sliim-projects.eu
  */
 
-if (class_exists('PHP_CodeSniffer_Standards_AbstractScopeSniff', true) === false) {
+if (class_exists('PHP_CodeSniffer_Standards_AbstractScopeSniff', TRUE) === FALSE) {
     throw new PHP_CodeSniffer_Exception(
         'Class PHP_CodeSniffer_Standards_AbstractScopeSniff not found'
     );
@@ -48,10 +48,13 @@ extends PEAR_Sniffs_NamingConventions_ValidFunctionNameSniff
      *
      * @return void
      */
-    protected function processTokenWithinScope(PHP_CodeSniffer_File $phpcsFile, $stackPtr, $currScope)
-    {
+    protected function processTokenWithinScope(
+        PHP_CodeSniffer_File $phpcsFile,
+        $stackPtr,
+        $currScope
+    ) {
         $methodName = $phpcsFile->getDeclarationName($stackPtr);
-        if ($methodName === null) {
+        if ($methodName === NULL) {
             // Ignore closures.
             return;
         }
@@ -61,8 +64,9 @@ extends PEAR_Sniffs_NamingConventions_ValidFunctionNameSniff
         // Is this a magic method. IE. is prefixed with "__".
         if (preg_match('|^__|', $methodName) !== 0) {
             $magicPart = substr($methodName, 2);
-            if (in_array($magicPart, $this->magicMethods) === false) {
-                $error = 'Method name "' . $className . '::' . $methodName . '" is invalid; only PHP magic methods should be prefixed with a double underscore';
+            if (in_array($magicPart, $this->magicMethods) === FALSE) {
+                $error = 'Method name "' . $className . '::' . $methodName .
+                '" is invalid; only PHP magic methods should be prefixed with a double underscore';
                 $phpcsFile->addError($error, $stackPtr);
             }
 
@@ -80,20 +84,22 @@ extends PEAR_Sniffs_NamingConventions_ValidFunctionNameSniff
         }
 
         $methodProps    = $phpcsFile->getMethodProperties($stackPtr);
-        $isPublic       = ($methodProps['scope'] === 'public') ? true : false;
+        $isPublic       = ($methodProps['scope'] === 'public') ? TRUE : FALSE;
         $scope          = $methodProps['scope'];
         $scopeSpecified = $methodProps['scope_specified'];
 
         // If it's a private method, it must have an underscore on the front.
-        if ($isPublic === false && $methodName{0} !== '_') {
-            $error = 'Private and protected method name "' . $className . '::' . $methodName . '" must be prefixed with an underscore';
+        if ($isPublic === FALSE && $methodName{0} !== '_') {
+            $error = 'Private and protected method name "' . $className . '::' . $methodName .
+            '" must be prefixed with an underscore';
             $phpcsFile->addError($error, $stackPtr);
             return;
         }
 
         // If it's not a private method, it must not have an underscore on the front.
-        if ($isPublic === true && $scopeSpecified === true && $methodName{0} === '_') {
-            $error = ucfirst($scope) . ' method name "' . $className . '::' . $methodName . '" must not be prefixed with an underscore';
+        if ($isPublic === TRUE && $scopeSpecified === TRUE && $methodName{0} === '_') {
+            $error = ucfirst($scope) . ' method name "' . $className . '::' . $methodName .
+            '" must not be prefixed with an underscore';
             $phpcsFile->addError($error, $stackPtr);
             return;
         }
@@ -104,15 +110,17 @@ extends PEAR_Sniffs_NamingConventions_ValidFunctionNameSniff
         // prefix if there is one because we cant determine if it is private or
         // public.
         $testMethodName = $methodName;
-        if ($scopeSpecified === false && $methodName{0} === '_') {
+        if ($scopeSpecified === FALSE && $methodName{0} === '_') {
             $testMethodName = substr($methodName, 1);
         }
 
-        if (PHP_CodeSniffer::isCamelCaps($testMethodName, false, $isPublic, false) === false) {
-            if ($scopeSpecified === true) {
-                $error = ucfirst($scope) . ' method name "' . $className . '::' . $methodName . '" is not in camel caps format';
+        if (PHP_CodeSniffer::isCamelCaps($testMethodName, FALSE, $isPublic, FALSE) === FALSE) {
+            if ($scopeSpecified === TRUE) {
+                $error = ucfirst($scope) . ' method name "' . $className . '::' . $methodName .
+                '" is not in camel caps format';
             } else {
-                $error = 'Method name "' . $className . '::' . $methodName . '" is not in camel caps format';
+                $error = 'Method name "' . $className . '::' . $methodName .
+                '" is not in camel caps format';
             }
 
             $phpcsFile->addError($error, $stackPtr);
