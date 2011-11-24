@@ -39,6 +39,7 @@
         <exclude name="Squiz.PHP.EmbeddedPhp" />
         <exclude name="Squiz.PHP.ForbiddenFunctions" />
         <exclude name="Squiz.PHP.DisallowMultipleAssignments" />
+        <exclude name="Squiz.PHP.DisallowComparisonAssignment" />
         <exclude name="Squiz.PHP.DisallowInlineIf" />
     </rule>
     <rule ref="Squiz/Sniffs/Functions/" />

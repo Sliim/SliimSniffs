@@ -14,7 +14,9 @@
  */
 
 if (class_exists('PHP_CodeSniffer_CommentParser_ClassCommentParser', TRUE) === FALSE) {
-    throw new PHP_CodeSniffer_Exception('Class PHP_CodeSniffer_CommentParser_ClassCommentParser not found');
+    throw new PHP_CodeSniffer_Exception(
+        'Class PHP_CodeSniffer_CommentParser_ClassCommentParser not found'
+    );
 }
 
 /**
