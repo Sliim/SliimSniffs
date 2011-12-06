@@ -5,8 +5,6 @@
     <exclude-pattern>*.css</exclude-pattern>
     <exclude-pattern>*.htm</exclude-pattern>
     <exclude-pattern>*.html</exclude-pattern>
-    <exclude-pattern>*.js</exclude-pattern>
-
 
     <rule ref="Generic/Sniffs/Classes/" />
     <rule ref="Generic/Sniffs/ControlStructures/" />
