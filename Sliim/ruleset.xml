@@ -42,7 +42,9 @@
         <exclude name="Squiz.PHP.DisallowComparisonAssignment" />
         <exclude name="Squiz.PHP.DisallowInlineIf" />
     </rule>
-    <rule ref="Squiz/Sniffs/Functions/" />
+    <rule ref="Squiz/Sniffs/Functions/">
+        <exclude name="Squiz.Functions.GlobalFunction" />
+    </rule>
     <rule ref="Squiz/Sniffs/WhiteSpace/">
         <exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing" />
     </rule>
