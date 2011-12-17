@@ -46,7 +46,6 @@ extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff
                                      'print'      => 'echo',
                                      'key_exists' => 'array_key_exists',
                                      'var_export' => 'DEBUG',
-                                     'var_dump'   => 'DEBUG',
                                      'error_log'  => 'DEBUG',
                                     );
 }//end class
