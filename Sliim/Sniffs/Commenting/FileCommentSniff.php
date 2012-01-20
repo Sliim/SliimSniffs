@@ -8,7 +8,6 @@
  * @package  CodeSniffer
  * @author   Sliim <sliim@mailoo.org>
  * @license  http://matrix.squiz.net/developer/tools/php_cs/licence BSD Licence
- * @version  Release: 0.1
  * @link     http://pear.php.net/package/PHP_CodeSniffer
  * @link     http://www.sliim-projects.eu
  */
@@ -40,7 +39,6 @@ if (class_exists('PHP_CodeSniffer_CommentParser_ClassCommentParser', TRUE) === F
  * @package  CodeSniffer
  * @author   Sliim <sliim@mailoo.org>
  * @license  http://matrix.squiz.net/developer/tools/php_cs/licence BSD Licence
- * @version  Release: 0.1
  * @link     http://pear.php.net/package/PHP_CodeSniffer
  * @link     http://www.sliim-projects.eu
  */
@@ -86,14 +84,14 @@ extends PEAR_Sniffs_Commenting_FileCommentSniff
                                         'order_text'     => 'follows @copyright (if used) or @author',
                                        ),
                        'version'    => array(
-                                        'required'       => TRUE,
+                                        'required'       => FALSE,
                                         'allow_multiple' => FALSE,
                                         'order_text'     => 'follows @license',
                                        ),
                        'link'       => array(
                                         'required'       => TRUE,
                                         'allow_multiple' => TRUE,
-                                        'order_text'     => 'follows @version',
+                                        'order_text'     => 'follows @version (if used) or @license',
                                        ),
                        'see'        => array(
                                         'required'       => FALSE,
