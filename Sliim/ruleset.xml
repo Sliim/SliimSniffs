@@ -31,7 +31,9 @@
     <rule ref="PEAR.WhiteSpace.ScopeClosingBrace" />
 
 
-    <rule ref="Squiz/Sniffs/Arrays/" />
+    <rule ref="Squiz/Sniffs/Arrays/">
+        <exclude name="Squiz.Arrays.ArrayBracketSpacing" />
+    </rule>
     <rule ref="Squiz.Commenting.FunctionCommentThrowTag" />
     <rule ref="Squiz/Sniffs/Operators/">
         <exclude name="Squiz.Operators.ComparisonOperatorUsage" />
