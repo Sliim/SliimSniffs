@@ -7,6 +7,8 @@
     <exclude-pattern>*.html</exclude-pattern>
     <exclude-pattern>*.js</exclude-pattern>
 
+    <rule ref="PSR2" />
+
     <rule ref="Generic/Sniffs/Classes/">
         <exclude name="Generic.Classes.DuplicateClassName" />
     </rule>
@@ -47,16 +49,16 @@
     </rule>
     <rule ref="Squiz/Sniffs/WhiteSpace/">
         <exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing" />
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing" />
+        <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace" />
     </rule>
     <rule ref="Squiz/Sniffs/ControlStructures/">
         <exclude name="Squiz.ControlStructures.SwitchDeclaration" />
+        <exclude name="Squiz.ControlStructures.ElseIfDeclaration" />
     </rule>
 
     <rule ref="Squiz.Classes.DuplicateProperty" />
-    <rule ref="Squiz.NamingConventions.ConstantCase" />
 
-
-    <rule ref="Zend.NamingConventions.ValidVariableName" />
     <rule ref="Zend.Debug.CodeAnalyzer" />
 
 </ruleset>
