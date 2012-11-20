@@ -18,7 +18,9 @@
     </rule>
     <rule ref="Generic/Sniffs/NamingConventions/" />
     <rule ref="Generic/Sniffs/CodeAnalysis/" />
-    <rule ref="Generic/Sniffs/WhiteSpace/" />
+    <rule ref="Generic/Sniffs/WhiteSpace/">
+        <exclude name="Generic.WhiteSpace.DisallowSpaceIndent" />
+    </rule>
 
     <rule ref="PEAR/Sniffs/Classes/" />
     <rule ref="PEAR/Sniffs/Functions/">
