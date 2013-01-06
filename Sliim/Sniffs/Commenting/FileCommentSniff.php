@@ -54,12 +54,12 @@ extends PEAR_Sniffs_Commenting_FileCommentSniff
      */
     protected $tags = array(
                        'category'   => array(
-                                        'required'       => TRUE,
+                                        'required'       => FALSE,
                                         'allow_multiple' => FALSE,
                                         'order_text'     => 'precedes @package',
                                        ),
                        'package'    => array(
-                                        'required'       => TRUE,
+                                        'required'       => FALSE,
                                         'allow_multiple' => FALSE,
                                         'order_text'     => 'follows @category',
                                        ),
